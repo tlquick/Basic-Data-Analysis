@@ -9,23 +9,14 @@ df.set_index("Country", inplace=True)
 # describe & head
 print(df.describe())
 print(df.head())
-
 # remove nulls
-# print(df.isnull().sum())
-# 1.delete
 df.dropna(inplace=True)
-# 2.replace
-# df.fillna(0, inplace=True)
-
-# convert string to numeric
-# only to found there are no strings
-
 # drop unused columns
 df = df.loc[['Australia', 'China']]
 df = df[["1980", "1990", "2000", "2010"]]
 # Create an average column using python
 df['Average'] = df.mean(axis=1)
-# Plot 2 graphs – a multiple bar for 1980, 2010 & Average and a line plot for 1980-2010
+# Plot a graph – a multiple bar for 1980, 2010 & Average and a line plot for 1980-2010
 XBar = [1980, 2010, "Average"]
 XLine = [1980, 1990, 2000, 2010]
 YBarAustralia = []
